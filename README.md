@@ -18,8 +18,13 @@ $ npm install
 ```
 
 ### configurar variables de entorno ... copy variables.env.example && paste variables.env :
-```sh example your host
+```sh 
 HOST=localhost
+
+NODE_ENV=development
+DATABASE=your-mongodb-url
+SECRETO=supersecretoo
+KEY=llavesecreta
 ```
 
 ### ejecutar el programa :
