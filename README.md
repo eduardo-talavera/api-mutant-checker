@@ -38,6 +38,6 @@ http://localhost:3000/mutation
 
 ### 💭 Url del cloud :
 ```sh
-https://dry-forest-10672.herokuapp.com/mutation
+https://intense-thicket-14970.herokuapp.com/mutation
 ```
 
