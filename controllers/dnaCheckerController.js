@@ -1,6 +1,7 @@
+const mongoose = require('mongoose');
+const Adns = mongoose.model('Adns');
 
 
-const Adns = require('../models/Adns');
 
 
 const matrixConstruct = require('../helpers/matrixConstruct');
