@@ -30,7 +30,7 @@ $ npm run dev
 ```
 
 ### 🚀enviar peticion POST con postman  a la siguiente url para un entorno local :
-<p align="center"><img src="https://github.com/Kuteji/jobs/blob/master/public/img/peticion-example.jpg"></p>
+<p align="center"><img src="https://github.com/Kuteji/jobs/blob/master/public/img/peticion-example.png"></p>
 ```sh
 http://localhost:3000/mutation
 ```
