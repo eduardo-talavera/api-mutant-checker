@@ -58,9 +58,7 @@ KEY=llavesecreta
 
 ### ejecutar el programa :
 ```sh
-$ npm start
-    o 
-$ npm run dev
+$ npm start o $ npm run dev
 ```
 
 ### 🚀Ejemplo de peticion POST con postman :
@@ -70,7 +68,11 @@ $ npm run dev
 http://localhost:3000/mutation
 ```
 
-#### Enviamos la peticion post para revisar si la cadena nitrogenada tiene mutación o no, lo que nos devolvera una respuesta json
+#### Staging
+```sh
+https://intense-thicket-14970.herokuapp.com/mutation
+```
+ Enviamos la peticion post para revisar si la cadena nitrogenada tiene mutación o no, lo que nos devolvera una respuesta json
 
 <p align="center"><img src="https://github.com/Kuteji/prueba_backend_N3/blob/master/public/img/peticion-example.png"><p>
 
@@ -79,11 +81,11 @@ http://localhost:3000/mutation
 ```sh
 POST /mutation
 ```
-#### para enviar la cadena nitrogenada que sera evaluada
+para enviar la cadena nitrogenada que sera evaluada
 
 ```sh
 GET /stats
 ```
-#### devuelve  un json con las estadisticas de las mutaciones
+devuelve  un json con las estadisticas de las mutaciones
 
 
