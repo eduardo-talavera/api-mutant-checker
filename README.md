@@ -1,13 +1,42 @@
-# Node js Api DNA Mutante Checker 🧬
+# Node js API Mutant Checker DNA 🧬
+
+- ### objetivo:
+Se requiere el desarrollo un proyecto que detecte si una persona tiene diferencias genéticas basándose en su secuencia de ADN. Para eso es necesario crear un programa con un método o función con la siguiente firma (En JavaScript/Node JS):
+
+hasMutation(dna)
+
+Debe recibir como parámetro un array de Strings que representan cada fila de una tabla
+de (NxN) con la secuencia del ADN. Las letras de los Strings solo pueden ser: (A,T,C,G), las
+cuales representa cada base nitrogenada del ADN.
 
 
-## Desafío:
+### Sin mutación
 
-Nivel 3:
-Anexar una base de datos, la cual guarde los ADN’s verificados con la API.Sólo 1 registro por ADN.
-Exponer un servicio extra “/stats” que devuelva un JSON con las estadísticas de las verificaciones de ADN: {“count_mutations”:40, “count_no_mutation”:100: “ratio”:0.4}
+| A | T | G | C | G | A |
+|---|---|---|---|---|---|
+| C | A | G | T | G | C |
+| T | T | A | T | T | T |
+| A | G | A | C | G | G |
+| G | C | G | T | C | A |
+| T | C | A | C | T | G |
 
-Tener en cuenta que la API puede recibir fluctuaciones agresivas de tráfico (Entre 100 y 1
+### Con mutación
+
+| A | T | G | C | G | A |
+|---|---|---|---|---|---|
+| C | A | G | T | G | C |
+| T | T | A | T | G | T |
+| A | G | A | A | G | G |
+| C | C | C | C | T | A |
+| T | C | A | C | T | G |
+
+Sabrás si existe una mutación si se encuentra más de una secuencia de cuatro letras
+iguales, ya sea horizontal, vertical o en diagonal.
+Ejemplo (Caso mutación):
+
+##### String[] dna = {"ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"};
+
+Se tiene en cuenta que la API puede recibir fluctuaciones agresivas de tráfico (Entre 100 y 1
 millón de peticiones por segundo).
 
 ## 📝 Instrucciones para correr el programa : 
@@ -22,7 +51,7 @@ $ npm install
 HOST=localhost
 
 NODE_ENV=development
-DATABASE=your-mongodb-url
+DATABASE=<your-mongodb-url>
 SECRETO=supersecretoo
 KEY=llavesecreta
 ```
@@ -34,15 +63,27 @@ $ npm start
 $ npm run dev
 ```
 
-### 🚀enviar peticion POST con postman  a la siguiente url para un entorno local :
+### 🚀Ejemplo de peticion POST con postman :
 
+#### Local
 ```sh
 http://localhost:3000/mutation
 ```
+
+#### Enviamos la peticion post para revisar si la cadena nitrogenada tiene mutación o no, lo que nos devolvera una respuesta json
+
 <p align="center"><img src="https://github.com/Kuteji/prueba_backend_N3/blob/master/public/img/peticion-example.png"><p>
 
-### 💭 Url del cloud :
+###  endpoints:
+
 ```sh
-https://intense-thicket-14970.herokuapp.com/mutation
+POST /mutation
 ```
+#### para enviar la cadena nitrogenada que sera evaluada
+
+```sh
+GET /stats
+```
+#### devuelve  un json con las estadisticas de las mutaciones
+
 
